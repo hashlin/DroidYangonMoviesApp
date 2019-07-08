@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    app:defaultDuration="1000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <Transition
+      android:id="@+id/transition_movie_info"
+      app:constraintSetEnd="@+id/frame_movie_info_middle"
+      app:constraintSetStart="@+id/frame_movie_info_end">
+
+    <OnClick app:targetId="@id/view_group_movie_info" app:clickAction="toggle"/>
+  </Transition>
+
+  <ConstraintSet android:id="@+id/frame_movie_info_middle" >
+    <Constraint
+        android:id="@+id/view_group_movie_info">
+      <Layout
+          android:layout_marginStart="24dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+    </Constraint>
+  </ConstraintSet>
+
+  <ConstraintSet android:id="@+id/frame_movie_info_end" >
+    <Constraint
+        android:id="@+id/view_group_movie_info">
+      <Layout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_marginStart="24dp"
+          app:layout_constraintStart_toStartOf="@+id/guide_vertical_50"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+    </Constraint>
+  </ConstraintSet>
+
+</MotionScene>

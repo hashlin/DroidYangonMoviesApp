@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_movie_poster"
+            android:text="Movie Poster"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+    />
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Movie Info Basics"
+      android:id="@+id/button_movie_info_basics"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="More Movies Basics"
+      android:id="@+id/button_more_movies_basics"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Movie Info + Synopsis"
+      android:id="@+id/button_movie_info_with_synopsis"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Poster + Movie Info 1.0"
+      android:id="@+id/button_poster_and_movie_info"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Poster + Movie Info 1.0 + Card Elevation"
+      android:id="@+id/button_poster_and_movie_info_with_card_elevation"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Poster + Movie Info 1.0 + Key Frames"
+      android:id="@+id/button_poster_and_movie_info_with_keyframes"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Poster + Movie Info 1.0 Finished"
+      android:id="@+id/button_poster_and_movie_info_finished"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Positioning movie info"
+      android:id="@+id/button_movie_info_positioning"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="3 Layouts Combined"
+      android:id="@+id/button_3_layouts_combined"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="3 Layouts Combined Finished"
+      android:id="@+id/button_3_layouts_combined_finished"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="3 Layouts Combined Polished"
+      android:id="@+id/button_3_layouts_combined_polished"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      />
+</LinearLayout>

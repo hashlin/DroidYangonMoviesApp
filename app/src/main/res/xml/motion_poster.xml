@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:defaultDuration="1000">
+
+  <Transition
+      android:id="@+id/transition_poster"
+      app:constraintSetEnd="@+id/frame_poster_middle"
+      app:constraintSetStart="@+id/frame_poster_top">
+    <OnClick
+        app:clickAction="toggle"
+        app:targetId="@+id/card_movie_poster"/>
+  </Transition>
+
+  <ConstraintSet android:id="@+id/frame_poster_middle">
+
+    <Constraint android:id="@+id/card_movie_poster">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginEnd="24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="2:3"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline_vertical_48"
+          app:layout_constraintTop_toTopOf="parent"/>
+    </Constraint>
+  </ConstraintSet>
+
+  <ConstraintSet
+      android:id="@+id/frame_poster_top">
+    <Constraint android:id="@+id/card_movie_poster">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="24dp"
+          app:layout_constraintDimensionRatio="2:3"
+          app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_52"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_10"/>
+    </Constraint>
+  </ConstraintSet>
+</MotionScene>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motion_layout_more_movies"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_more_movies_basics"
+    >
+
+
+
+
+
+
+  <ImageView
+      android:id="@+id/image_arrow"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_margin="8dp"
+      android:padding="2dp"
+      android:src="@drawable/ic_up"
+      android:tint="#7f7f7f"
+      />
+
+  <TextView
+      android:id="@+id/text_more_movies"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text="More Movies"
+      android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+      />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_more_movies"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:clipToPadding="false"
+      android:paddingEnd="8dp"
+      android:paddingStart="8dp"
+      />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

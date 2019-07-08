@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    app:defaultDuration="1000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <Transition
+      android:id="@+id/transition"
+      app:constraintSetEnd="@+id/more_movies_expanded"
+      app:constraintSetStart="@+id/more_movies_collapsed">
+
+
+    <!--<OnClick app:clickAction="toggle" app:targetId="@+id/text_more_movies"/>-->
+  </Transition>
+
+  <ConstraintSet android:id="@+id/more_movies_collapsed">
+    <Constraint android:id="@+id/image_arrow">
+      <Layout
+          android:layout_width="18dp"
+          android:layout_height="18dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginStart="12dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+    </Constraint>
+
+    <Constraint android:id="@+id/text_more_movies">
+      <Layout
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginStart="12dp"
+          app:layout_constraintBottom_toBottomOf="@+id/image_arrow"
+          app:layout_constraintStart_toEndOf="@+id/image_arrow"
+          app:layout_constraintTop_toTopOf="@+id/image_arrow"/>
+    </Constraint>
+
+    <Constraint android:id="@+id/rv_more_movies">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          app:layout_constraintStart_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/image_arrow"
+          />
+      <PropertySet android:visibility="invisible"/>
+    </Constraint>
+  </ConstraintSet>
+
+  <ConstraintSet android:id="@+id/more_movies_expanded" app:deriveConstraintsFrom="@+id/more_movies_collapsed">
+    <Constraint android:id="@+id/image_arrow">
+      <Transform android:rotation="-180"/>
+    </Constraint>
+
+    <Constraint android:id="@+id/rv_more_movies">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/image_arrow"/>
+      <PropertySet
+          android:visibility="visible"/>
+    </Constraint>
+
+  </ConstraintSet>
+
+</MotionScene>

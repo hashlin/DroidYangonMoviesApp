@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:id="@+id/motion_layout_poster_and_movie_info"
+    app:layoutDescription="@xml/motion_more_movies_positioning"
+    >
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/card_more_movies"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      style="@style/MoreMoviesCard"
+      app:cardElevation="4dp"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_horizontal_10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent=".10"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_vertical_52"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent=".52"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_vertical_48"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent=".48"
+      />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_vertical_70"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent=".70"
+      />
+
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_horizontal_93"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent=".93"
+      />
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:defaultDuration="1000">
+
+  <Transition
+      android:id="@+id/transition_poster"
+      app:constraintSetEnd="@+id/frame_poster_middle"
+      app:constraintSetStart="@+id/frame_poster_top">
+    <OnClick
+        app:clickAction="toggle"
+        app:targetId="@+id/card_movie_poster"/>
+    <KeyFrameSet>
+      <KeyPosition
+          app:framePosition="90"
+          app:keyPositionType="parentRelative"
+          app:motionTarget="@+id/card_movie_poster"
+          app:percentX="1"
+          app:percentY=".5"
+          />
+
+      <KeyPosition
+          app:framePosition="90"
+          app:keyPositionType="parentRelative"
+          app:motionTarget="@+id/card_movie_info"
+          app:percentHeight="1"
+          app:percentWidth="1"
+          app:percentX="0"
+          />
+
+
+      <KeyPosition
+          app:percentWidth="0"
+          app:framePosition="40"
+          app:motionTarget="@+id/card_movie_info"/>
+
+    </KeyFrameSet>
+  </Transition>
+
+  <Transition
+      android:id="@+id/transition_more_movies"
+      app:constraintSetEnd="@+id/frame_more_movies_expanded"
+      app:constraintSetStart="@+id/frame_poster_top">
+    <OnSwipe
+        app:dragDirection="dragUp"
+        app:touchRegionId="@+id/card_more_movies"
+        app:touchAnchorId="@+id/card_more_movies"/>
+  </Transition>
+
+
+  <ConstraintSet android:id="@+id/frame_poster_middle">
+
+    <Constraint android:id="@+id/card_movie_poster">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginEnd="24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="2:3"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline_vertical_48"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+      <CustomAttribute
+          app:attributeName="cardElevation"
+          app:customDimension="2dp"/>
+    </Constraint>
+
+    <Constraint android:id="@+id/card_movie_info">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="1:1"
+          app:layout_constraintEnd_toEndOf="@+id/guideline_vertical_52"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+    </Constraint>
+
+
+    <Constraint android:id="@+id/card_more_movies">
+      <Layout
+          android:layout_width="128dp"
+          android:layout_height="128dp"
+          app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_93"
+          app:layout_constraintStart_toStartOf="@+id/guideline_vertical_70"
+          />
+    </Constraint>
+
+
+    <Constraint android:id="@+id/card_more_movies">
+      <Layout
+          android:layout_width="400dp"
+          android:layout_height="128dp"
+          app:layout_constraintTop_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline_vertical_60"
+          />
+    </Constraint>
+  </ConstraintSet>
+
+  <ConstraintSet
+      android:id="@+id/frame_poster_top">
+    <Constraint android:id="@+id/card_movie_poster">
+      <Layout
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="24dp"
+          app:layout_constraintDimensionRatio="2:3"
+          app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_52"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_10"/>
+      <CustomAttribute
+          app:attributeName="cardElevation"
+          app:customDimension="16dp"/>
+    </Constraint>
+
+    <Constraint android:id="@+id/card_movie_info">
+      <Layout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="48dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_10"
+          />
+    </Constraint>
+
+    <Constraint android:id="@+id/card_more_movies">
+      <Layout
+          android:layout_width="400dp"
+          android:layout_height="128dp"
+          app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_93"
+          app:layout_constraintStart_toStartOf="@+id/guideline_vertical_60"
+          />
+    </Constraint>
+
+  </ConstraintSet>
+
+  <ConstraintSet app:deriveConstraintsFrom="@+id/frame_poster_top"
+      android:id="@+id/frame_more_movies_expanded">
+    <Constraint android:id="@+id/card_more_movies">
+      <Layout
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="224dp"
+          />
+    </Constraint>
+  </ConstraintSet>
+</MotionScene>
