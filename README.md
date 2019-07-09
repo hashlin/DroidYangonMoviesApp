@@ -1,6 +1,9 @@
 # DroidYangonMoviesApp
 Sample project for the talk made for DroidYangon
 
+
+
+Slides are available on [speakerdeck](https://speakerdeck.com/hashlin/motion-layout-make-your-apps-move-auto-magically)
 <img src="https://raw.githubusercontent.com/hashlin/DroidYangonMoviesApp/master/sample.gif" >
 
 
